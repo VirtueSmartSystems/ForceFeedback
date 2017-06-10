@@ -19,7 +19,7 @@ Encoder encoder(2, 3);
 /* Global variables */
 long oldPosition = -999;
 long currentPos = 1;
-int setPoint = 20;
+int setPoint = 28;
 
 /* Global variables for the timer */
 bool timerActive = false;
@@ -95,9 +95,9 @@ void doSteps(bool dir, int amount) {
   digitalWrite(dirPin, dir);
   for (int i = 0; i <= amount; i++) {
     digitalWrite(stepPin, HIGH);
-    delay(2);
+    delay(3);
     digitalWrite(stepPin, LOW);
-    delay(2);
+    delay(3);
   }
   digitalWrite(enablePin, HIGH);
 }
